@@ -9,7 +9,10 @@
 import UIKit
 
 class StartScreenViewController: UIViewController {
+    @IBOutlet weak var gameNameLabel: UILabel!
 
+    @IBOutlet weak var newGameButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

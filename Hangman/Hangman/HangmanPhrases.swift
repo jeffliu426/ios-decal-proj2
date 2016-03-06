@@ -23,4 +23,18 @@ class HangmanPhrases {
         return phrases.objectAtIndex(index) as! String
     }
     
+    static func saveData(word : String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setObject(word, forKey: "word")
+    }
+    
+    static func getData() -> String? {
+        var word : String?
+        let defaults = NSUserDefaults.standardUserDefaults()
+        word = defaults.objectForKey("word") as? String
+        return word
+ 
+    }
+    
 }
